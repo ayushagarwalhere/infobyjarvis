@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: white;
+
+}
+
+/* Grid Container */
+.grid-container {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    width: 250vmin; /* Adjust the grid size */
+    height: 200vmin;
+    gap: 2px; /* Gap between cells */
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+/* Grid Cells */
+.grid-item {
+    width: 100%;
+    height: 100%;
+    background: pink;
+    border: 0.1px solid rgb(207, 209, 209);
+    transition: background 0.3s;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    
+}
+
+/* Section Styling */
+.education-section {
+    width: 100%;
+  
+}
+
+/* Section Heading */
+.section-heading {
+
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: manga;
+    color: #0b0c0c;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+.gg{
+    font-size: 20px;
+    text-align: center;
+    color: #0b0c0c;
+    font-weight: 250;
+    letter-spacing: 1px;
+}
+.chatbot-container {
+    background-image: url("edubot.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+    max-height: 300px;
+   position: relative;
+   left: 1100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chat-header {
+    background: transparent;
+    color: rgb(82, 29, 29);
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-message, .user-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 70%;
+}
+
+.bot-message {
+    background: transparent;
+    color: rgb(14, 13, 13);
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #000000;
+    align-self: flex-end;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #050505;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width:300px
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ec54b2;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.chat-input button {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .chatbot-container {
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+}
+
+/* Education Grid */
+.education-grid {
+    font-family: manga;
+    color: #000000; 
+}
+#learning h3{
+    font-size: 30px;
+    position: absolute;
+    top:510px;
+}
+#learning p{
+    font-size: 20px;
+    position: absolute;
+    top:550px;
+}
+#tutor{
+    display: flex;
+flex-direction: column;
+width: 800px;
+height: 200px;
+border: 5px solid black;
+border-radius: 20px;
+justify-content: center;
+background: linear-gradient(0deg, #4285F4, #DB4437);
+position:absolute ;
+top: 630px;
+left:350px;
+}
+#tutor h3{
+    font-size: 30px;
+}
+#tutor p{
+    font-size: 20px;  
+}
+#search{
+    display: flex;
+flex-direction: column;
+width: 800px;
+height: 200px;
+border: 5px solid black;
+border-radius: 20px;
+justify-content: center;
+background: linear-gradient(0deg, #4285F4, #DB4437);
+position:absolute ;
+top: 900px;
+left: 350px;
+}
+#search h3{
+    font-size:30px;
+}
+#search p{
+    font-size: 20px;
+}
+#insights{
+display: flex;
+flex-direction: column;
+width: 800px;
+height: 200px;
+border: 5px solid black;
+border-radius: 20px;
+justify-content: center;
+background: linear-gradient(0deg, #4285F4, #DB4437);
+position:absolute ;
+top: 1170px;
+left: 350px;
+}
+#insights h3{
+    font-size:30px;
+}
+#insights p{
+    font-size: 20px;
+}
+.features{
+
+    color: #000000;
+    letter-spacing: 2px;
+    font-family: manga;
+}
+.one h1{
+    position: absolute;
+    top:1580px;
+    left: 0px;
+    font-size: 42px;
+}
+.one p{
+    position: absolute;
+    left: 0px;
+    top:1640px;
+    font-size: 25px;
+}
+.two h1{
+    position: absolute;
+    left: 0px;
+    top:1720px;
+    font-size: 42px;
+}
+.two p{
+    position: absolute;
+    left: 0px;
+    top:1780px;
+    font-size: 25px;
+}
+.three h1{
+    position: absolute;
+    left: 0px;
+    top:1860px;
+    font-size: 42px;
+}
+.final h1{
+font-size: 42px;
+position: absolute;
+top:2050px;
+}
+
+#first{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    width: 460px;
+    height: 350px;
+    position: absolute;
+    top: 2100px;
+    left:10px;
+    background-image: url("first.png");
+    background-position: top;
+}
+#second{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 25px;
+    width: 460px;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    background-image: url("second.png");
+    background-position: top;
+}
+#third{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 25px;
+    width: 460px;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+    background-image: url("third.jpg");
+    background-position: top;
+}
+.thanks{
+    position: absolute;
+    top:2700px;
+    left: 600px;
+}
+

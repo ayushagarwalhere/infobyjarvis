@@ -1,0 +1,10 @@
+body{
+   background-image: url("vacationbg.jpg");  
+   background-size: cover;
+}
+.homepage{
+    font-family: manga;
+    font-size: 40px;
+    text-align: center;
+    color: rgba(27, 23, 23);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day01</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
+
+
+  </head>
+  <body>
+    <div id="main">
+      <div class="loader">
+        <h2 class="zoom">JARVIS</h2>
+        <h1 class="scramble">INFOSPHERE</h1>
+        <div class="Loading"></div>
+      </div>
+    </div> 
+  </div>
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>  
+  </div>
+  <div class="dropdown">
+    <i class="fa-solid fa-bars" style="color: #74C0FC;" onclick="toggleDropdown()"></i>
+    <div class="dropdown-content" id="dropdown-menu">
+      <a href="log.html">Register/LogIn</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="jarvis">
+      <h1 class="head" style="font-size: 50px;">INFOSPHERE <br>"Empowering the Future with Intelligent Innovation." </h1>
+      
+  </div>
+  <div class="arrow">
+      <button class="nextpg-arr" onclick="scrollDown()"><img src="images/page.arr.jpg"></button>
+    </div>
+    <div class="container">
+      <div class="section section1">
+        <h2 class="section-heading">EDUCATION</h2>
+        <button class="explore-btn" onclick="navigateTo('education.html')"aria-label="In a doubt??">Explore</button>
+      </div>
+      <div class="section section2">
+        <h2 class="section-heading">HEALTHCARE</h2>
+        <button class="explore-btn" onclick="navigateTo('healthcare.html')"aria-label="Need a healthy convo..">Explore</button>
+      </div>
+      <div class="section section3">
+        <h2 class="section-heading">VACATION PLANNER</h2>
+        <button class="explore-btn" onclick="navigateTo('vacation.html')" aria-label="Planning a trip ?">Explore</button>
+      </div>
+      <div class="section section4">
+        <h2 class="section-heading">FINANCE</h2>
+        <button class="explore-btn" onclick="navigateTo('finance.html')" aria-label="Need a financial suggestion ?">Explore</button>
+      </div>  
+  </div>
+  <div>
+    <div class="navbar">
+      <button class="dropbtn" onclick="toggleDropdown()"></button>
+      <div class="dropdown-content">
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="log.html">Register/LogIn</a>
+      </div>
+    </div>
+  </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="descrambler.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
