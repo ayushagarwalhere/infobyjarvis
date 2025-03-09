@@ -1,0 +1,155 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(156, 194, 228);
+}
+
+/* Flexbox container to divide screen */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left section with image */
+.left-section {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    border-radius: 20px;
+}
+
+.left-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+}
+
+/* Overlay text on the image */
+.overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    background: rgba(44, 40, 40, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px;
+}
+.top{
+    display: inline;
+    position:absolute;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    bottom:570%;
+    left: -2%;
+
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+/* Google Map */
+#map {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Chatbot container */
+.chat-container {
+    width: 230%;
+    height: 400px;
+    background: rgb(92, 85, 85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat box */
+.chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Input box and buttons */
+.input-container {
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 4px solid #c70e0e;
+    border-radius: 20px;
+}
+.sent{
+    height: 100PX;
+    background-color: rgb(81, 164, 189);
+    border: 2px solid darkblue;
+    border-radius: 20px;
+}
+.it{
+    
+    background-color: rgb(154, 105, 200);
+    border: 3px solid burlywood;
+    border-radius: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+.mic{
+    height: 100PX;
+    border-radius: 15px;
+}
+button {
+    padding: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Itinerary Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}

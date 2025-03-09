@@ -1,57 +1,46 @@
-const API_KEY = "AIzaSyDAl1_5nuGmY4TQpmVpfZIQImve4juT994";
-const chatBox = document.getElementById("chat-box");
-const userInput = document.getElementById("user-input");
+const API_KEY = "AIzaSyB1Wo0YRQd_lglhi7c4S8ZcC_KuGkxiaL0";
+document.getElementById("chat-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const userInput = document.getElementById("user-input").value.trim();
+    const chatBox = document.getElementById("chat-box");
 
-// Function to send a message
-async function askGemini(question) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
+    if (!userInput) return;
 
-    const requestBody = {
-        contents: [{
-            parts: [{ text: question }]
-        }]
-    };
+    // Display user message
+    chatBox.innerHTML += `<div class="user-message"><b>You:</b> ${userInput}</div>`;
+    document.getElementById("user-input").value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
 
-    try {
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(requestBody),
-        });
+    async function sendMessage(userInput) {
+        try {
+            const response = await fetch(
+                `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=${API_KEY}`,
+                { 
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ contents: [{ parts: [{ text: userInput }] }] })
+                }
+            );
 
-        const data = await response.json();
-        console.log("API Response:", data); // Debugging output
+            if (!response.ok) {
+                throw new Error(`HTTP Error ${response.status}: ${response.statusText}`);
+            }
 
-        // Extract AI response
-        const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't understand.";
+            const data = await response.json();
+            console.log("API Response:", data);
 
-        // Display the response in the chat
-        displayMessage(question, "user-message");
-        displayMessage(botReply, "bot-message");
-
-    } catch (error) {
-        console.error("Error:", error);
-        displayMessage("Error connecting to AI", "bot-message");
+            // Extract bot response
+            const botReply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "I couldn't process your request.";
+            return botReply;
+        } catch (error) {
+            console.error("Fetch error:", error);
+            return "Error connecting to AI.";
+        }
     }
-}
 
-// Function to display messages in chat
-function displayMessage(text, className) {
-    const messageDiv = document.createElement("div");
-    messageDiv.classList.add(className);
-    messageDiv.textContent = text;
-    chatBox.appendChild(messageDiv);
-    chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to latest message
-}
-
-// Event listener for the send button
-document.querySelector(".chat-input").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-    const question = userInput.value.trim();
-    if (question) {
-        askGemini(question);
-        userInput.value = ""; // Clear input after sending
-    }
+    // Call sendMessage with user input and display the bot's response
+    sendMessage(userInput).then(botReply => {
+        chatBox.innerHTML += `<div class="bot-message"><b>JARVIS:</b> ${botReply}</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
 });
