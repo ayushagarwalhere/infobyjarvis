@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>education</title>
+    <link rel="stylesheet" href="education.css"/>
+</head>
+<body>
+   <div class="grid-container"></div>
+
+    <!-- Education Section -->
+    <div class="education-section">
+        <h2 class="section-heading">Advancing education<br> with AI </h2>
+        <h4 class="gg">We are committed to make AI helpful for every student.</h4>
+        <div class="chatbot-container">
+            <div class="chat-header">Personal edubot, JARVIS</div>
+            <div class="chat-box" id="chat-box">
+                <div class="bot-message">Hello! How can I assist you today?</div>
+            </div>
+            <div class="chat-input">
+                <form id="chat-form">
+                    <input type="text" id="user-input" placeholder="Ask your doubt...">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="education-grid">
+            <div class="edu-card" id="learning">
+                <h3>📚Bold technology, applied responsibly</h3>
+                <p>AI can never replace the expertise, knowledge or creativity of an educator — but it can be a helpful tool<br>
+                     to enhance and enrich teaching and learning experiences. </p>
+            </div>
+            <div class="edu-card" id="tutor">
+                <h3>🤖 AI Tutors</h3>
+                <p>Smart tutors assist in answering student queries and explaining complex topics.</p>
+            </div>
+            <div class="edu-card" id="search">
+                <h3>🔍Any study material with just a click</h3>
+                <p>AI helps students find the best study materials and courses easily.</p>
+            </div>
+            <div class="edu-card" id="insights">
+                <h3>📊 Performance Insights</h3>
+                <p>AI analyzes student progress and suggests improvements.<br> You can try this feature by giving a test based on what you are studying.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="features">
+            <div class="one">
+                <h1>Makes learning personal for students</h1>
+                <p>AI can help meet students where they are, so they can learn in ways that work for them.</p>
+            </div>
+            <div class="two">
+                <h1>Elevate educators</h1>
+                <p>AI can help educators boost their productivity, giving them time back to invest in themselves and their students.</p>
+            </div>  
+            <div class="three">  
+                <h1>Teaching for Tomorrow</h1>
+                <p></p>
+            <div class="final">
+                <h1>AI training, toolkits and guides for educators</h1>
+                <div >
+                    <div class="toolkits-grid"
+                   <h1 class="toolkits" id="first">Guardian's Guide to AI</h1>
+                   <h1 class="toolkits" id="second">Generative AI for Educators</h1>  
+                   <h1 class="toolkits" id="third">Teaches through language models</h1>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thanks">
+        <P>THIS IS ALL WE HAVE GOT TILL NOW !!<BR> KEEP LEARNING</P>
+        <h1>THANK YOU</h1>
+    </div>
+
+   
+    <script src="education.js"></script>
+</body>
+</html>
+
+
+    <script>
+        const gridContainer = document.querySelector(".grid-container");
+
+        // Create 20x20 grid dynamically
+        for (let i = 0; i <900; i++) {
+            const cell = document.createElement("div");
+            cell.classList.add("grid-item");
+            gridContainer.appendChild(cell);
+        }
+    </script>
+
+</body>
+</html>
