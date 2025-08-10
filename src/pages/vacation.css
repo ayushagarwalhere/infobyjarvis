@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 body{
-   background-image: url("vacationbg1.jpg");  
+   background-image: url("../public/images/vacationbg1.jpg");  
    background-size: cover;
    overflow-x: hidden;
 }

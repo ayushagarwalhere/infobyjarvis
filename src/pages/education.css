@@ -68,7 +68,7 @@ body {
     letter-spacing: 1px;
 }
 .chatbot-container {
-    background-image: url("edubot.jpg");
+    background-image: url("../public/images/edubot.jpg");
     background-size: cover;
     background-position: center;
     width: 350px;
@@ -271,7 +271,7 @@ top:2050px;
     position: absolute;
     top: 2100px;
     left:10px;
-    background-image: url("first.png");
+    background-image: url("../public/images/first.png");
     background-position: top;
 }
 #second{
@@ -284,7 +284,7 @@ top:2050px;
     position: absolute;
     top: 0px;
     left: 500px;
-    background-image: url("second.png");
+    background-image: url("../public/images/second.png");
     background-position: top;
 }
 #third{
@@ -297,7 +297,7 @@ top:2050px;
     position: absolute;
     top: 0px;
     left: 1000px;
-    background-image: url("third.jpg");
+    background-image: url("../public/images/third.jpg");
     background-position: top;
 }
 .thanks{

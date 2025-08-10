@@ -387,9 +387,9 @@ body {
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   transform: translateZ(20);
-  position: relative;
+  position: absolute;
   top:450px;
-  left:225px;
+  left:125px;
 }
 .section-heading {
   position: absolute;
