@@ -1,22 +1,22 @@
 @font-face {
     font-family: Chana;
-    src: url(/chaney-ultraextended-webfont.ttf);
+    src: url(./src/public/fonts/chaney-ultraextended-webfont.ttf);
   }
 @font-face {
     font-family: kaushal;
-    src: url(\KaushanScript-Regular.otf);
+    src: url(./src/public/fonts/KaushanScript-Regular.otf);
   }
 @font-face {
     font-family: manga;
-    src: url(\Manga-Template.ttf);
+    src: url(./src/public/fonts/Manga-Template.ttf);
   }
 @font-face {
     font-family: cursive;
-    src: url(\Allura-Regular.otf);
+    src: url(./src/public/fonts/Allura-Regular.otf);
   }
 @font-face {
     font-family:banco;
-    src: url(\Banco.ttf);
+    src: url(./src/public/fonts/Banco.ttf);
   }
 
 *{
@@ -367,10 +367,10 @@ body {
 }
 
 /* Background Images */
-.section1 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('education1.jpg'); }
-.section2 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%),  url('healthcare1.jpg'); }
-.section3 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('vacation1.jpg'); }
-.section4 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('finance1.jpg'); }
+.section1 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('./src/public/images/education1.jpg'); }
+.section2 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%),  url('./src/public/images/healthcare1.jpg'); }
+.section3 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('./src/public/images/vacation1.jpg'); }
+.section4 { background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%), url('./src/public/images/finance1.jpg'); }
 
 /* Fancy Button */
 .explore-btn {

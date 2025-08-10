@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Section</title>
+    <link rel="stylesheet" href="newtrip.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlgqSiD_Q9XIiAVmX_VpA0UAHwEeRAcO0&libraries=places"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Image with Text Overlay -->
+        <div class="left-section">
+            <img src="tripjarvis.jpg" alt="Vacation Image">
+            <div class="overlay-text">
+                <h1 class="top">JARVIS:YOUR TRAVEL AI</h1>
+                <h2>Got a vacation coming up?</h2>
+                <p>Start here by asking me anything about it.</p>
+            </div>
+        </div>
+
+        <!-- Right Section: Empty for now -->
+        <div class="right-section">
+            
+
+            <div class="chat-container">
+                <h2>🌍 Trip Planner </h2>
+                <div class="chat-box" id="chat-box"></div>
+                <div class="input-container">
+                    <input type="text" id="user-input" placeholder="Ask me about your trip...">
+                    <button class="sent" id="sendbutton" onclick="sendMessage()">Send</button>
+                    <button class="mic" id="voicebutton" onclick="startVoiceRecognition()">🎤 Speak</button>
+                    <div id="map"></div>
+                    
+                </div>
+                <button class="it" onclick="viewItinerary()">📅 View Itinerary</button>
+            </div>
+        
+
+         <!-- Itinerary Modal -->
+          <div id="itinerary-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeItinerary()">&times;</span>
+                <h2>Your Itinerary</h2>
+                <div id="itinerary-content"></div>
+            </div>
+          </div>
+
+     </div>
+
+    </div>
+    <script src="newtrip.js"></script>
+</body>
+</html>
